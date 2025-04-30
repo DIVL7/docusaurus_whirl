@@ -1,3 +1,7 @@
+---
+sidebar_position: 2
+---
+
 # Guía de Instalación - Whirl
 
 Esta guía describe los pasos necesarios para instalar y ejecutar la plataforma de capacitación Whirl en un entorno de desarrollo local.

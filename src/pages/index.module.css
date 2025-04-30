@@ -4,10 +4,17 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 4rem 0; /* Restore bottom padding for content */
   text-align: center;
   position: relative;
   overflow: hidden;
+  /* Removed fixed height, let content determine height */
+  /* Add display flex to center content vertically */
+  display: flex;
+  align-items: center; /* Center content vertically */
+  /* Update background to blue gradient */
+  background: linear-gradient(to bottom, #00A0E9, #0077C8);
+  color: white; /* Change text color for better contrast */
 }
 
 @media screen and (max-width: 996px) {

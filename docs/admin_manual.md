@@ -1,15 +1,22 @@
+---
+sidebar_position: 3
+---
+
 # Manual de Usuario - Administrador
 
 Bienvenido al manual de usuario para administradores de la plataforma Whirlpool LMS. Esta guía describe las funcionalidades clave disponibles para los administradores.
 
-## Tabla de Contenidos
+## Inicio de Sesión
 
-- [Panel de Control (Dashboard)](#panel-de-control-dashboard)
-- [Gestión de Usuarios](#gestión-de-usuarios)
-- [Gestión de Cursos](#gestión-de-cursos)
-- [Gestión de Módulos de Curso](#gestión-de-módulos-de-curso)
-- [Generación de Reportes](#generación-de-reportes)
-- [Inicio de Sesión](#inicio-de-sesión)
+Para acceder a las funcionalidades de administrador, debes iniciar sesión a través de la página de login (`login.html`) con tus credenciales de administrador.
+
+1.  Abre tu navegador web y ve a la URL de la plataforma (ej. `http://localhost:[puerto]/` o la URL de producción).
+2.  Serás redirigido a la página de inicio de sesión (`login.html`).
+3.  Ingresa tu **Usuario** de administrador.
+4.  Ingresa tu **Contraseña** de administrador.
+5.  Haz clic en el botón "Iniciar Sesión".
+6.  Si las credenciales son correctas, serás redirigido al Panel de Control del Administrador. Si no, verás un mensaje de error.
+
 
 ## Panel de Control (Dashboard)
 
@@ -55,7 +62,7 @@ La sección de gestión de usuarios (`admin/users.html`) permite administrar tod
 
 **Para Buscar y Filtrar Usuarios:**
 1.  Utiliza la barra de búsqueda en la parte superior de la lista para buscar por nombre o email.
-2.  Puede haber opciones de filtro para ver solo Administradores, solo Técnicos, usuarios activos o inactivos. Selecciónalos según sea necesario.
+2.  Hay opciones de filtro para ver según se necesite. Selecciónalos según sea necesario.
 
 ## Gestión de Cursos
 
@@ -84,10 +91,10 @@ Desde la sección de gestión de cursos (`admin/courses.html`), los administrado
 **Para Eliminar un Curso:**
 1.  Localiza el curso en la lista.
 2.  Haz clic en el icono de "Eliminar".
-3.  Confirma la acción. *Nota: Esto puede eliminar también el progreso asociado de los técnicos.*
+3.  Confirma la acción. 
 
-**Para Asignar Cursos (si aplica):**
-*   (Esta funcionalidad puede variar) Podría haber una opción dentro de la edición del curso o en la gestión de usuarios para asignar cursos específicos a técnicos individuales o grupos.
+**Para Asignar Cursos:**
+*   Hay una opción dentro de la edición del curso o en la gestión de usuarios para asignar cursos específicos a técnicos individuales o grupos.
 
 ## Gestión de Módulos de Curso
 
@@ -111,7 +118,7 @@ Una vez creado un curso, puedes añadirle contenido estructurado en módulos.
 2.  Utiliza el editor de contenido proporcionado para añadir/modificar:
     - **Texto:** Escribe y formatea explicaciones, instrucciones, etc.
     - **Imágenes:** Sube archivos de imagen relevantes.
-    - **Videos:** Incrusta videos (posiblemente subiéndolos o mediante enlaces externos).
+    - **Videos:** Incrusta videos (mediante enlaces externos).
     - **PDFs:** Adjunta documentos PDF para descargar o visualizar.
 3.  Guarda los cambios del contenido del módulo.
 
@@ -133,39 +140,9 @@ Una vez creado un curso, puedes añadirle contenido estructurado en módulos.
 
 La sección de reportes (`admin/reports.html`) permite generar informes sobre diversas actividades en la plataforma:
 
-- Reportes de progreso de los técnicos en los cursos.
-- Reportes de finalización de cursos.
-- Reportes de actividad de usuarios.
-- Reportes de calificaciones en cuestionarios.
-- Exportar reportes (posiblemente a CSV o PDF).
-
-**Para Generar un Reporte:**
-1.  Navega a la sección "Generación de Reportes".
-2.  Selecciona el tipo de reporte que deseas generar desde un menú desplegable o lista (Progreso de Técnicos, Finalización de Cursos, Actividad, Calificaciones).
-3.  Aplica los filtros necesarios:
-    - **Rango de Fechas:** Especifica un período de tiempo.
-    - **Curso Específico:** Filtra por un curso en particular.
-    - **Usuario/Técnico Específico:** Filtra por un usuario.
-    - **Estado (Completado/En Progreso):** Filtra por el estado de avance.
-4.  Haz clic en el botón "Generar Reporte" o "Ver".
-5.  El reporte se mostrará en pantalla.
-
-**Para Exportar un Reporte:**
-1.  Una vez generado el reporte, busca un botón de "Exportar" (comúnmente a CSV o PDF).
-2.  Haz clic en el botón y selecciona el formato deseado.
-3.  El archivo del reporte se descargará a tu computadora.
-
-## Inicio de Sesión
-
-Para acceder a las funcionalidades de administrador, debes iniciar sesión a través de la página de login (`login.html`) con tus credenciales de administrador.
-
-1.  Abre tu navegador web y ve a la URL de la plataforma (ej. `http://localhost:[puerto]/` o la URL de producción).
-2.  Serás redirigido a la página de inicio de sesión (`login.html`).
-3.  Ingresa tu **Email** de administrador.
-4.  Ingresa tu **Contraseña** de administrador.
-5.  Haz clic en el botón "Iniciar Sesión".
-6.  Si las credenciales son correctas, serás redirigido al Panel de Control del Administrador. Si no, verás un mensaje de error.
+- Reportes de tasa de finalización de cursos.
+- Reportes de tasa de éxito de usuarios.
+- Reportes de tasa de error de usuarios
+- Reportes de actividad en foros.
 
 ---
-
-*Este manual está en desarrollo. Se añadirán más detalles y capturas de pantalla próximamente.*

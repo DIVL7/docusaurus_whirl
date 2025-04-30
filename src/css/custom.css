@@ -6,25 +6,70 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #0077c8; /* Whirlpool Blue */
+  --ifm-color-primary-dark: #006bb3;
+  --ifm-color-primary-darker: #005fa0;
+  --ifm-color-primary-darkest: #004c80;
+  --ifm-color-primary-light: #1a8cd1;
+  --ifm-color-primary-lighter: #339bda;
+  --ifm-color-primary-lightest: #4db0e3;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #4db0e3; /* Lighter Whirlpool Blue for dark theme */
+  --ifm-color-primary-dark: #339bda;
+  --ifm-color-primary-darker: #1a8cd1;
+  --ifm-color-primary-darkest: #0077c8;
+  --ifm-color-primary-light: #66c0e8;
+  --ifm-color-primary-lighter: #80cfec;
+  --ifm-color-primary-lightest: #99d9f0;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Remove margin and padding from main content area to collapse empty space */
+main {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Add styles for the secondary button */
+.button--secondary {
+  background-color: #FF7F00; /* Orange background */
+  border-color: #FF7F00; /* Orange border */
+  color: white !important; /* White text, use !important to override Infima potentially */
+}
+
+/* Add hover styles for the secondary button */
+.button--secondary:hover {
+  background-color: #e67300; /* Darker orange on hover */
+  border-color: #e67300; /* Darker orange border on hover */
+  color: white !important; /* Ensure text remains white on hover */
+}
+
+/* --- Layout Adjustments for Full Height Hero --- */
+
+/* Target the main content wrapper provided by Docusaurus Layout */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* Make the wrapper fill the vertical space between navbar and footer */
+  min-height: calc(100vh - var(--ifm-navbar-height) - var(--ifm-footer-height));
+}
+
+/* Make the hero banner grow to fill the available space in the flex container */
+/* Ensure heroBanner class selector is specific enough if needed */
+.main-wrapper > .hero.hero--primary { /* Targeting the direct child header */
+  flex-grow: 1;
+  /* Re-apply flex centering for content within the now-expanded hero */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hide the main element if it's empty, so it doesn't take up space */
+main:empty {
+  display: none;
 }
